@@ -1,0 +1,17 @@
+public static void highLightElement(WebDriver driver, WebElement element) {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'border: 2px solid black;');", element);
+		if (IsElementPresent(element)) {
+			try {
+				Thread.sleep(800);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			js.executeScript("arguments[0].setAttribute('style','border: solid 2px white')", element);
+		} else {
+			Assert.assertTrue(false, "Element Not Found");
+			logger.error("Element Not found");
+		}
+	}
