@@ -1,0 +1,32 @@
+	String output = null;
+  public static String autoVehiclenum() {
+		StringBuilder sb1 = new StringBuilder();
+		char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+		for (int i = 0; i < 2; i++) {
+			char c = chars[random.nextInt(chars.length)];
+			sb1.append(c);
+		}
+
+		StringBuilder sb2 = new StringBuilder();
+		char[] num = "1234567890".toCharArray();
+		for (int i = 0; i < 2; i++) {
+			char c = num[random.nextInt(num.length)];
+			sb2.append(c);
+		}
+		StringBuilder sb3 = new StringBuilder();
+		char[] chars1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+		for (int i = 0; i < 2; i++) {
+			char c = chars1[random.nextInt(chars1.length)];
+			sb3.append(c);
+		}
+
+		StringBuilder sb4 = new StringBuilder();
+		char[] num1 = "1234567890".toCharArray();
+		for (int i = 0; i < 4; i++) {
+			char c = num1[random.nextInt(num1.length)];
+			sb4.append(c);
+		}
+		output = sb1.toString() + "-" + sb2.toString() + "-" + sb3.toString() + "-" + sb4.toString();
+		// System.out.println("WareHouse Name: "+output+"\n");
+		return output;
+	}
