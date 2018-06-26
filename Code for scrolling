@@ -1,11 +1,9 @@
+public static void scrolltoset() {
+      Dimension size = driver.manage().window().getSize();
+      int starty = (int) (size.getHeight() * 0.70);
+      int endy = (int) (size.getHeight() * 0.30);
+      int XCoordinates = size.getWidth();
+      driver.swipe(XCoordinates/2,starty,XCoordinates/2,endy, 1000);
 
-	public static void scrolltoset() {
-		//MobileElement element = driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[2]/android.view.ViewGroup[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Spinner[4]/android.widget.TextView[1]"));
-		 Dimension size = driver.manage().window().getSize();
-		  int starty = (int) (size.getHeight() * 0.70);
-		  int endy = (int) (size.getHeight() * 0.30);
-		  int XCoordinates = size.getWidth();
-		  driver.swipe(XCoordinates/2,starty,XCoordinates/2,endy, 1000);
-		  
 		  
 	}	
